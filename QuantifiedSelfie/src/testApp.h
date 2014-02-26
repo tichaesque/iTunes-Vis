@@ -75,5 +75,6 @@ class testApp : public ofBaseApp
     int numSongsDownloaded = 150;
     int currentMonth;
     int numSongs = 0;
+    float timestamp = 0;
     string currentMonthString;
 };
