@@ -67,12 +67,10 @@ class testApp : public ofBaseApp
     vector <string> dictionary;
     
     vector<string> songNames;
+    vector<float> speeds;
     
-    vector<ofSoundPlayer> songFiles;
-    
-    float speed = 0.8;
+    float speed = 0.8; //speed that the spheres move
     ofGLRenderer myGLRender;
-    int numSongsDownloaded = 150;
     int currentMonth;
     int numSongs = 0;
     float timestamp = 0;
