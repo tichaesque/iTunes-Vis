@@ -336,7 +336,7 @@ void testApp::drawScene()
 //--------------------------------------------------------------
 void testApp::keyPressed(int key)
 {
-    if(key == 'a')
+    if(key == ' ')
     {
         speed = 0;
     }
@@ -431,7 +431,7 @@ void testApp::keyPressed(int key)
 void testApp::keyReleased(int key)
 {
     
-    if(key == 'a')
+    if(key == ' ')
     {
         speed = 0.8;
     }

@@ -1,5 +1,3 @@
-boolean grabbed = false;
-
 void setup() {
   
   pinMode(9, INPUT);
@@ -12,11 +10,10 @@ void loop() {
   
   //the user is grabbing with the gloves
   if (grabbing == HIGH) { 
-    Keyboard.press('a');
-    grabbed = true;
+    Keyboard.press(' '); 
   }
   
-  else if (grabbed) {
+  else {
     Keyboard.releaseAll();
   }
 }
