@@ -15,7 +15,7 @@ void testApp::setup()
 	oculusRift.baseCamera = &cam;
 	oculusRift.setup();
     
-    csv.loadFile(ofToDataPath("iTunes-log.csv"));
+    csv.loadFile(ofToDataPath("iTunes-log2.csv"));
     
     ofAddListener(recognizer.speechRecognizedEvent, this, &testApp::speechRecognized);
     recognizer.initRecognizer();
@@ -65,11 +65,16 @@ void testApp::makeSpheres()
             
             DemoSphere d;
             
-            /*d.color = ofColor(ofRandom(50,255),
+            d.color = ofColor(ofRandom(50,255),
                               ofRandom(200),
-                              ofRandom(125));*/
-            //d.color = sphereColor;
+                              ofRandom(125));
+           
             
+            //I decided not to include the genre in the
+            //final version because the color scheme would not be
+            //as aesthetically pleasing
+            //and to allow for easier readability
+            /*
             if(genre.find("Alternative") !=std::string::npos) {
                 d.color = ofColor::fromHex(0xffb732);
             }
@@ -127,13 +132,13 @@ void testApp::makeSpheres()
             else {
                 d.color = ofColor::fromHex(0x919191);
             }
+             */
             
             d.pos = ofVec3f(ofRandom(-200,200), ofRandom(-200, 200), ofRandom(-20000000, -50000));
             
             d.floatPos.y = d.pos.y;
             d.floatPos.x = d.pos.x;
             
-            //d.radius = ofRandom(5, 20);
             d.radius = ofMap(rating, 10, 100, 5, 20);
             
             d.bHighlighted = false;
@@ -342,84 +347,84 @@ void testApp::keyPressed(int key)
     }
     
     //testing
-    else if(key == '1')
+    if(key == '1')
     {
         currentMonth = 1;
         currentMonthString = "January";
         makeSpheres();
     }
     
-    else if(key == '2')
+    if(key == '2')
     {
         currentMonth = 2;
         currentMonthString = "February";
         makeSpheres();
     }
     
-    else if(key == '3')
+    if(key == '3')
     {
         currentMonth = 3;
         currentMonthString = "March";
         makeSpheres();
     }
     
-    else if(key == '4')
+    if(key == '4')
     {
         currentMonth = 4;
         currentMonthString = "April";
         makeSpheres();
     }
     
-    else if(key == '5')
+    if(key == '5')
     {
         currentMonth = 5;
         currentMonthString = "May";
         makeSpheres();
     }
     
-    else if(key == '6')
+    if(key == '6')
     {
         currentMonth = 6;
         currentMonthString = "June";
         makeSpheres();
     }
     
-    else if(key == '7')
+    if(key == '7')
     {
         currentMonth = 7;
         currentMonthString = "July";
         makeSpheres();
     }
     
-    else if(key == '8')
+    if(key == '8')
     {
         currentMonth = 8;
         currentMonthString = "August";
         makeSpheres();
     }
     
-    else if(key == '9')
+    if(key == '9')
     {
         currentMonth = 9;
         currentMonthString = "September";
         makeSpheres();
     }
     
-    else if(key == '0')
+    if(key == '0')
     {
         currentMonth = 10;
         currentMonthString = "October";
         makeSpheres();
     }
     
-    else if(key == '-')
+    if(key == '-')
     {
         currentMonth = 11;
         currentMonthString = "November";
         makeSpheres();
     }
     
-    else if(key == '=')
+    if(key == '=')
     {
         currentMonth = 12;
         currentMonthString = "December";
